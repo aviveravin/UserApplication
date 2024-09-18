@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/user_navigation"
+    tools:ignore="InvalidNavigation">
+
+    <fragment
+        android:id="@+id/userListFragment"
+        android:name="com.example.usersapplication.fragment.UserListFragment"
+        android:label="fragment_bus_boarding_dropping"
+        tools:layout="@layout/fragment_user_list" >
+    </fragment>
+    <fragment
+        android:id="@+id/userDetailFragment"
+        android:name="com.example.usersapplication.fragment.UserDetailFragment"
+        android:label="fragment_bus_passenger_detail"
+        tools:layout="@layout/fragment_user_detail" >
+
+    </fragment>
+</navigation>

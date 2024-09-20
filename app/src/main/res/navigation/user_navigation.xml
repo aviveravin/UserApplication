@@ -3,19 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/user_navigation"
-    tools:ignore="InvalidNavigation">
+    tools:ignore="InvalidNavigation"
+    app:startDestination="@id/userListFragment">
 
     <fragment
         android:id="@+id/userListFragment"
         android:name="com.example.usersapplication.fragment.UserListFragment"
         android:label="fragment_bus_boarding_dropping"
         tools:layout="@layout/fragment_user_list" >
+        <action
+            android:id="@+id/action_userListFragment_to_userDetailFragment"
+            app:destination="@id/userDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/userDetailFragment"
         android:name="com.example.usersapplication.fragment.UserDetailFragment"
         android:label="fragment_bus_passenger_detail"
         tools:layout="@layout/fragment_user_detail" >
-
+        <argument
+            android:name="userId"
+            app:argType="integer" />
     </fragment>
 </navigation>

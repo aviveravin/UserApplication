@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -69,5 +70,16 @@ dependencies {
 
     implementation (libs.moshi)
     //noinspection KaptUsageInsteadOfKsp
-    kapt ("com.squareup.moshi:moshi-kotlin-codegen:1.8.0")
+    kapt (libs.moshi.kotlin.codegen)
+
+    implementation (libs.moshi.v1140 )           // Core Moshi
+    implementation (libs.moshi.kotlin)
+
+    // Retrofit
+    implementation (libs.retrofit.v290)
+    implementation( libs.converter.gson.v290)
+
+// Coroutines
+    implementation (libs.kotlinx.coroutines.core)
+    implementation (libs.kotlinx.coroutines.android)
 }
